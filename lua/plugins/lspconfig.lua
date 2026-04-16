@@ -4,13 +4,15 @@ return {
 
 	config = function()
 		vim.diagnostic.config({
-			virtual_text = {
-				enabled = true,
-				prefix = 'x'
-			}
+			virtual_text = false 
 		})
 
 		local capabilities = require('blink.cmp').get_lsp_capabilities()
+		capabilities.textDocument.foldingRange = {
+			dynamicRegistration = false,
+			lineFoldingOnly = true,
+		}
+
 		vim.lsp.config("*", { capabilities = capabilities })
 	end
 }

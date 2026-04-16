@@ -1,7 +1,7 @@
 -- Force quit
 vim.keymap.set("n", "<leader>qq", ":qa!<cr>")
 
-vim.keymap.set("n", "<leader>e", ":Oil<cr>")
+vim.keymap.set("n", "<leader>e", ":Oil<cr>", {silent = true})
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })

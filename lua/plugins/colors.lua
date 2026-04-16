@@ -4,5 +4,14 @@ return {
 		opts = {
 			transparent = true
 		}
+	},
+
+	{ 
+		"EdenEast/nightfox.nvim",
+		opts = {
+			options = {
+				transparent = true
+			}
+		}
 	}
 }

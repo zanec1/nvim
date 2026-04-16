@@ -3,6 +3,6 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
 
 	opts = {
-		options = { section_separators = '', component_separators = '' }
+		options = { component_separators = { right = '', left = ''}, section_separators = { right = '', left = ''} }
 	}
 }
