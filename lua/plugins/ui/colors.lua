@@ -1,6 +1,7 @@
 return {
     {
         'vague-theme/vague.nvim',
+        enabled = false,
         priority = 1000,
         config = function()
             vim.cmd.colorscheme "vague"
@@ -10,14 +11,14 @@ return {
     {
         "EdenEast/nightfox.nvim",
         priority = 1000,
-        enabled = false,
+        enabled = true,
         config = function()
             require("nightfox").setup({
                 options = {
                     transparent = true
                 }
             })
-            vim.cmd.colorscheme "carbonfox"
+            vim.cmd.colorscheme "nightfox"
         end
     },
 
@@ -47,7 +48,27 @@ return {
         priority = 1000, -- Ensure it loads first
         enabled = false,
         config = function()
-            vim.cmd[[colorscheme onedark_dark]]
+            require("onedarkpro").setup({
+                styles = {
+                    types = "NONE",
+                    methods = "NONE",
+                    numbers = "NONE",
+                    strings = "NONE",
+                    comments = "italic",
+                    keywords = "bold,italic",
+                    constants = "NONE",
+                    functions = "italic",
+                    operators = "NONE",
+                    variables = "NONE",
+                    parameters = "NONE",
+                    conditionals = "italic",
+                    virtual_text = "NONE",
+                },
+                options = {
+                    transparency = true
+                }
+            })
+            vim.cmd[[colorscheme onedark]]
         end
     }
 }
